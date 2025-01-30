@@ -4,7 +4,7 @@ using WebApplication1.Communication.Requests;
 using WebApplication1.Communication.Response;
 
 namespace WebApplication1.Controllers;
-[Route("[controller]")]
+[Route("api/[controller]")]
 
 [ApiController]
 public class UserController : ControllerBase
@@ -34,5 +34,23 @@ public class UserController : ControllerBase
         };
 
         return Created(string.Empty, response);
+    }
+
+    [HttpPut]
+    [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult Update(
+        [FromRoute] int id,
+        [FromBody]RequestUpdateUserProfileJson request)
+    {
+
+        return NoContent();
+    }
+
+    [HttpDelete]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult Delete()
+    {
+        return NoContent();
     }
 }

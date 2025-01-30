@@ -2,7 +2,7 @@
   {
     "ContainingType": "WebApplication1.Controllers.UserController",
     "Method": "GetById",
-    "RelativePath": "user",
+    "RelativePath": "api/user",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -33,7 +33,7 @@
   {
     "ContainingType": "WebApplication1.Controllers.UserController",
     "Method": "Create",
-    "RelativePath": "user",
+    "RelativePath": "api/user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -53,6 +53,49 @@
           "text/json"
         ],
         "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/user",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/user/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApplication1.Communication.Requests.RequestUpdateUserProfileJson",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
       }
     ]
   }
